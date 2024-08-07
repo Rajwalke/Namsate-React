@@ -7,18 +7,63 @@ import { jsx } from "react/jsx-runtime";
 // jsx-is not html inside javascript
 // jsx is html like syntax 
 
-const jsxHeading=(
-    <h1 id="heading" className="heading">
-        Namste React using JSX 🚀
-    </h1>
-    );
+// React Element
+// const jsxHeading=(
+//     <h1 id="heading" className="heading">
+//         Namste React using JSX 🚀
+//     </h1>
+//     );
     
-console.log(jsxHeading);
+// console.log(jsxHeading);
+// const root=ReactDOM.createRoot(document.querySelector("#root"));
+// root.render(jsxHeading);
+
+// React Component
+const recElement=(
+    <h1>Be Stronger</h1>
+);
+const NameUser=()=>(
+    <div className="NameUser">
+        <h1>Hello Raj Walke Welcome to the Course</h1>
+    </div>
+)
+const number =1000;
+// component composion 
+const Heading=()=>{
+    return (
+        <div className="Container">
+                    <NameUser/>
+                    <p>{number}</p>
+                    {500+300}
+                    
+            <h1> Namste React using JSX 🚀</h1>
+
+            {/* react element inside react component */}
+           <p>{recElement}</p> 
+            
+        </div>
+
+    )
+};
+
+const hello=(
+    <div className="ok">
+        <h2>Recat component inside the React Element</h2>
+        
+        {/* <Heading/> */}
+        {/* <Heading></Heading> */}
+        {Heading()};
+    </div>
+)
+// const Heading2=()=> (
+//     <div>
+//             <h1>Namste React</h1>
+//     </div>
+
+// );
 const root=ReactDOM.createRoot(document.querySelector("#root"));
-root.render(jsxHeading);
-
-
-
+// root.render(<Heading/>);
+root.render(hello)
 {/* <div class="parent">
 <div class="child">
     <h1>I'm H1 Tag</h1>
