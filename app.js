@@ -1101,14 +1101,15 @@ const Header=()=>{
 }
 
 const RestroCard=({restroData})=>{
+  const {name,costForTwo,avgRating,cuisines,areaName}=restroData?.info
     return(
         <div className="res-card">
             <img className="dish-img" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + restroData.info.cloudinaryImageId}></img>
-            <h3>{restroData.info.name}</h3>
-            <h4>{restroData.info.costForTwo}</h4>
-            <h4>{restroData.info.avgRating} <FontAwesomeIcon icon={faStar} style={{color: "#1ef11e",}} /> •{restroData.info.sla.slaString}</h4>
-            <h4>{restroData.info.cuisines.join(",")}</h4>
-            <h4>{restroData.info.areaName}</h4>
+            <h3>{name}</h3>
+            <h4>{costForTwo}</h4>
+            <h4>{avgRating} <FontAwesomeIcon icon={faStar} style={{color: "#1ef11e",}} /> •{restroData.info.sla.slaString}</h4>
+            <h4>{cuisines.join(",")}</h4>
+            <h4>{areaName}</h4>
         </div>
     )
 }
@@ -1116,15 +1117,19 @@ const RestroCard=({restroData})=>{
 const Body=()=>{
     return (
         <div className="body">
-            {/* search bar */}
             <div className="search-bar">
                 <p>search</p>
             </div>
             <div className="res-container">
-                {/* restro-card */}
-                {/* <RestroCard restroName="Raajbagh Restaurant" rating="4.4" waiting_Time="38 minutes" cusisine="North Indian,South Indian" address="Andheri(East)"  /> */}
-                {/* <RestroCard restroName="KFC" rating="4.5" waiting_Time="20 minutes" cusisine="Burger,Fast Food..." address="Jogeshwari(West)"  /> */}
-                <RestroCard restroData={restroApi[0]}/>
+              
+                 {
+                  restroApi.map((restroinformation)=>(
+                    <RestroCard key={restroinformation.info.id}restroData={restroinformation}/>
+                  ))
+                  }
+
+                {/* wihtout loop or any map filter  */}
+                {/* <RestroCard restroData={restroApi[0]}/>
                 <RestroCard restroData={restroApi[1]}/>
                 <RestroCard restroData={restroApi[2]}/>
                 <RestroCard restroData={restroApi[3]}/>
@@ -1133,8 +1138,9 @@ const Body=()=>{
                 <RestroCard restroData={restroApi[6]}/>
                 <RestroCard restroData={restroApi[7]}/>
                 <RestroCard restroData={restroApi[8]}/>
-                <RestroCard restroData={restroApi[9]}/>
+                <RestroCard restroData={restroApi[9]}/> */}
                 
+                {/* normal */}
                 {/* <RestroCard/>
                 <RestroCard/>
                 <RestroCard/>
