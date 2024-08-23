@@ -22,16 +22,33 @@
     flex-wrap: wrap;
     list-style-type: none;
     font-size: 1.5rem;
+    align-items: center;
 
 }
 .navbar>ul>li{
     margin: 2rem;   
 
 }
-
-.search-bar{
+.Btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
     padding: 10px;
-    margin: 2px;
+}
+
+/* .top-reated{ */
+    /* padding: 10px; */
+    /* margin: 2px; */
+
+/* } */
+
+.filter-btn{
+    padding: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 10px;
+    cursor: pointer;
 }
 .res-container{
     display: flex;
@@ -43,11 +60,17 @@
     background-color: #f0f0f5;
     text-align: left;
     margin: 10px;
-
+    overflow: hidden;
+    box-sizing: border-box;
+    word-wrap: break-word;
 }
 .res-card>h3{
     font-weight: 600;
     margin-top: 5px;
+    width: 95%;
+}
+.res-card>cuisines{
+    font-size: 5rem;
 }
 .res-card:hover{
     border: 1px solid black;
@@ -59,6 +82,82 @@
     border-radius: 5px;
 }
 .res-card>h4{
-    margin-top: 0.7rem;
+     margin-top: 0.7rem;
     padding-right: 10px;
+    width: 100%;
+    
+}
+.cusiArray{
+    margin-top: 15px;
+    /* margin-top: 8px; */
+    word-wrap: break-word;
+}
+/* .cuisines{
+    font-size: 5rem;
+    font-weight: 800;
+} */
+
+/* dishlist */
+.dish_img{
+    width: 200px;
+    cursor: pointer;
+}
+.DishesSection{
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+    /* align-items: start; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.shimmer-card{
+    width: 220px;
+    height: 400px;
+    padding: 5px 10px;
+    background-color: #f0f0f5;
+    margin: 10px;
+    
+}
+.shammer-btn{
+    display: flex;
+    flex-wrap: wrap;
+}
+.btn-card{
+    width: 220px;
+    height: 40px;
+    background-color: #f0f0f5;
+    padding: 5px 10px;
+    margin: 10px;
+}
+.login{
+    padding:10px 30px;
+    font-size: 1.3rem;
+    background-color: #f0f0f5;
+    cursor: pointer;
+    /* text-align: start; */
+}
+.login:hover{
+    background-color: #b2b2ba;
+    border:  1px solid black;
+}
+.search-Input{
+    padding: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.BtnSearch{
+    padding: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
 }
